@@ -2,22 +2,30 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CardList from './Components/CardList';
-
-let peopleArray = [
-    
-  {
-      name:"Ivan Zamora Arias",
-      avatar_url:"https://avatars2.githubusercontent.com/u/30245989?v=4",
-      company:"IOET"
-  },
-  {
-      name:"Merd Mansourifar", 
-      avatar_url:"https://avatars0.githubusercontent.com/u/25105474?v=4", 
-      company:"IOET"
-  }
-];
+import Form from './Components/Form';
 
 class App extends Component {
+  state={
+    peopleArray : [
+    
+    {
+        name:"Ivan Zamora Arias",
+        avatar_url:"https://avatars2.githubusercontent.com/u/30245989?v=4",
+        company:"IOET"
+    },
+    {
+        name:"Merd Mansourifar", 
+        avatar_url:"https://avatars0.githubusercontent.com/u/25105474?v=4", 
+        company:"IOET"
+    }
+  ]
+};
+addNewCard = (cardInfo) => {
+  console.log(cardInfo);
+  this.setState(prevState => ({
+    peopleArray: prevState.peopleArray.concat(cardInfo)
+  }));
+};
   render() {
     return (
       <div className="App">
@@ -28,7 +36,8 @@ class App extends Component {
         <p className="App-intro">
           Say Hello :D 
         </p>
-        <CardList cards={peopleArray}/>
+        <Form onSubmit={this.addNewCard}/>
+        <CardList cards={this.state.peopleArray}/>
       </div>
     );
   }
