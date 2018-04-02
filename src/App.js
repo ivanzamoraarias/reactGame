@@ -37,8 +37,8 @@ addNewCard = (cardInfo) => {
         <p className="App-intro">
           Say Hello :D 
         </p>
-        <Form class='form' onSubmit={this.addNewCard}/>
-        <CardList class= 'card' cards={this.state.peopleArray}/>
+        <Form class='formF' onSubmit={this.addNewCard}/>
+        <CardList class= 'cardF' cards={this.state.peopleArray}/>
         <Particles />
         
       </div>
