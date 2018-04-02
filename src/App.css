@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card{
+  color: antiquewhite;
+}
+
+.form{
+  background-color: crimson;
+}

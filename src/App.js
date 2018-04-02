@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CardList from './Components/CardList';
 import Form from './Components/Form';
+import Particles from './Components/Particles'
 
 class App extends Component {
   state={
@@ -36,8 +37,10 @@ addNewCard = (cardInfo) => {
         <p className="App-intro">
           Say Hello :D 
         </p>
-        <Form onSubmit={this.addNewCard}/>
-        <CardList cards={this.state.peopleArray}/>
+        <Form class='form' onSubmit={this.addNewCard}/>
+        <CardList class= 'card' cards={this.state.peopleArray}/>
+        <Particles />
+        
       </div>
     );
   }
