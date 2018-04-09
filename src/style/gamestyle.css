@@ -1,0 +1,23 @@
+span{
+    display: inline-block;
+    margin: 0.5em;
+    text-align: center;
+    background-color: blueviolet;
+    width: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fa-star{
+    margin: 0.5em;
+    font-size: 24px;
+}
+.selected{
+    background-color: black;
+    color: aqua;
+    cursor: not-allowed;
+}
+.used{
+    background-color: chartreuse;
+    color: burlywood;
+    cursor: not-allowed;
+}
