@@ -4,6 +4,7 @@ import './App.css';
 import CardList from './Components/CardList';
 import Form from './Components/Form';
 import Particles from './Components/Particles'
+import ImageCarrousel from './Components/ImageCarrousel'
 
 class App extends Component {
   state={
@@ -27,6 +28,7 @@ addNewCard = (cardInfo) => {
     peopleArray: prevState.peopleArray.concat(cardInfo)
   }));
 };
+
   render() {
     return (
       <div className="App">
@@ -40,6 +42,7 @@ addNewCard = (cardInfo) => {
         <Form class='formF' onSubmit={this.addNewCard}/>
         <CardList class= 'cardF' cards={this.state.peopleArray}/>
         <Particles />
+        <ImageCarrousel />
         
       </div>
     );
